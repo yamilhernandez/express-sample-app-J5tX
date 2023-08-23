@@ -4,8 +4,14 @@ import express from 'express';
 import * as fs from 'fs';
 import multer from 'multer';
 import * as os from 'os';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 const port = process.env.PORT || 3000;
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const upload = multer({ dest: os.tmpdir() });
 
