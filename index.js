@@ -52,6 +52,14 @@ let proveedores = {
 	},
 };
 
+app.get('/json', (req, res) => {
+	res.json({ 'Choo Choo': 'Welcome to your Express app 🚅' });
+});
+
+app.get('/test', (req, res) => {
+	res.send('Hello World!');
+});
+
 app.get('/', (req, res) => {
 	res.send('Hello World!');
 });
