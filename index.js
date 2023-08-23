@@ -2,7 +2,7 @@ import * as csv from 'csv-parser';
 import * as Excel from 'exceljs';
 import express from 'express';
 import * as fs from 'fs';
-import * as multer from 'multer';
+import { multer } from 'multer';
 import * as os from 'os';
 const port = process.env.PORT || 3000;
 const app = express();
