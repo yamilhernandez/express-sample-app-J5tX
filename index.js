@@ -108,6 +108,10 @@ app.post('/upload', upload.single('file'), function (req, res) {
 				let ret = moneyToString(data.ToPayAmount) * 0.1;
 				let final =
 					moneyToString(data.ToPayAmount) - ret - moneyToString(data.Discount);
+				if (data.ServiceCode === 'S0250') {
+					final = final / 2;
+				}
+
 				/* 			gTotal += moneyToString(data.ToPayAmount);
 			gDiscount += moneyToString(data.Discount);
 			gPercent += roundToTwo(ret);
