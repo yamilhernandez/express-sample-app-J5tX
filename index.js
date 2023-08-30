@@ -243,6 +243,7 @@ const sheet = async () => {
 		})
 		.catch((err) => {
 			console.log(err.message);
+			console.log('error file not created');
 		});
 };
 
