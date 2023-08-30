@@ -1,5 +1,6 @@
-import * as csv from 'csv-parser';
-import * as Excel from 'exceljs';
+import cors from 'cors';
+import csv from 'csv-parser';
+import Excel from 'exceljs';
 import express from 'express';
 import * as fs from 'fs';
 import multer from 'multer';
@@ -66,6 +67,13 @@ app.use(function (req, res, next) {
 	);
 	next();
 });
+
+app.use(
+	cors({
+		origin: '*',
+		methods: ['GET'],
+	})
+);
 
 app.get('/json', (req, res) => {
 	res.json({ 'Choo Choo': 'Welcome to your Express app 🚅' });
