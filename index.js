@@ -150,7 +150,7 @@ app.listen(port, () => {
 });
 
 const sheet = async () => {
-	const fileName = 'output/output.xlsx';
+	const fileName = '/output/output.xlsx';
 	//console.log(cleanResults);
 
 	const wb = new Excel.Workbook();
