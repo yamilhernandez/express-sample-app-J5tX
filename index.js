@@ -88,7 +88,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/download', (req, res) => {
-	const file = `${__dirname}/output.xlsx`;
+	const file = `${__dirname}/output/output.xlsx`;
 	res.download(file); // Set disposition and send it.
 });
 
@@ -149,7 +149,7 @@ app.listen(port, () => {
 });
 
 const sheet = async () => {
-	const fileName = 'output.xlsx';
+	const fileName = 'output/output.xlsx';
 	//console.log(cleanResults);
 
 	const wb = new Excel.Workbook();
